@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prediction | Envirosense</title>
+  <link rel="stylesheet" href="predict.css" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+          <img src="images/logo.png" alt="Envirosense Logo" class="logo" width="200" height="70" />
+          <h1>Air Quality Prediction</h1>
+        </div>
+      </header>
+      
+
+  <main class="container">
+    <section class="card">
+       <h2>Enter Your Location</h2>
+        <div>
+  <label for="state">Select State:</label>
+  <select id="state" onchange="populateCities()">
+    <option value="">--Select State--</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+  </select>
+</div>
+<br>
+        <div>
+  <label for="city">Select City:</label>
+  <select id="city">
+    <option value="">--Select City--</option>
+    <script>
+        populateCities();
+    </script>
+  </select>
+</div>
+
+<br>
+      <button onclick="predict()">Predict </button>
+      <p id="result"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Envirosense. All rights reserved.</p>
+  </footer>
+
+  <script src="predict.js"></script>
+</body>
+</html>
